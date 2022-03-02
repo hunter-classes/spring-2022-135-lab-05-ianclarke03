@@ -14,23 +14,46 @@ bool isDivisibleBy(int n, int d)
     }
 }
 
-bool isPrime(int n)
-{
+bool isPrime(int n) {
+  int x = 0;
   for (int i = 2; i <= n-1; i++)
   {
-    if (n % i != 0)
-      return false;
-    else if (n % i == 0)
-      return true;
-  }
-  std::cout << "\n";
+    int remainder = n % i;
+    if (remainder != 0) // is a prime
+      x++;
+    }
+  return x == (n-2);
 }
 
+/*
+int nextPrime(int n)
+{
+  //int num = n + 1;
+  for (int i = 2; i <= n-1; i++)
+  {
+    n++;
+    int remainder = n % i;
+    if (remainder == 0) // is not a prime
+      n++;
+    else if (remainder != 0)
+      return n;
+    }
+}
+*/
 
 int main()
 {
-  std::cout << isDivisibleBy(10,5) << "\n";
-  std::cout << isPrime (10) << "\n";
+  std::cout << isDivisibleBy(10,5) << "\n"; //test 10,5 and 11,4
+  
+  std::cout << isPrime(8) << "\n"; // test 2, 15, and 23
+  std::cout << isPrime(15) << "\n";
+  std::cout << isPrime(17) << "\n";
+  std::cout << isPrime(2) << "\n";
 
+  /*
+  std::cout << nextPrime(2) << "\n"; // test 2, 14, and 17
+  std::cout << nextPrime(14) << "\n";
+  std::cout << nextPrime(17) << "\n";
+*/
   return 0;
 }
