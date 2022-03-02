@@ -1,5 +1,5 @@
 #include <iostream>
-//#include "funcs.h"
+#include "funcs.h"
 
 // add functions here
 
@@ -41,6 +41,7 @@ int nextPrime(int n)
 }
 */
 
+/*
 int main()
 {
   std::cout << "Task A\n";
@@ -54,10 +55,11 @@ int main()
   std::cout << isPrime(2) << "\n";
 
   std::cout << "Task C\n";
-  /*
+  
   std::cout << nextPrime(2) << "\n"; // test 2, 14, and 17
   std::cout << nextPrime(14) << "\n";
   std::cout << nextPrime(17) << "\n";
-*/
+
   return 0;
 }
+*/
