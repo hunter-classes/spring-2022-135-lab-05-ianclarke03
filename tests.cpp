@@ -23,13 +23,13 @@ TEST_CASE("Part C: testing 0, 2, 14, and 17"){
   CHECK(nextPrime(14) == 17);
   CHECK(nextPrime(17) == 19);
 }
-/*
+
 TEST_CASE("Part D: testing (2,20), (3,7), and (8,10)"){
-  CHECK(countPrimes(2, 20) == );
-  CHECK(countPrimes(3, 7) == );
-  CHECK(countPrimes(8, 10) == );
+  CHECK(countPrimes(2, 20) == 8);
+  CHECK(countPrimes(0, 7) == 3);
+  CHECK(countPrimes(8, 10) == 0);
 }
-*/
+
 
 TEST_CASE("Part E: testing 17, 2, 15, and 19"){
   CHECK(isTwinPrime(17) == true);
@@ -44,5 +44,3 @@ TEST_CASE("Part F: testing 17"){
   CHECK(nextTwinPrime(0) == 3);
 }
   
-  return 0;
-}

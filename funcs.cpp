@@ -39,14 +39,18 @@ int nextPrime(int n)
 
 int countPrimes(int a, int b)
 {
-  int x = a;
-  while (a <= x <= b)
+  int count = 0;
+  while (a <= b)
     {
-      if(!(isPrime(x)))
-        x++;
+      if((isPrime(a)))
+      {
+        count++;
+        a++;
+        }
       else
-      return x;
+      a++;
     }
+  return count;
 }
 
 bool isTwinPrime(int n)
@@ -65,12 +69,17 @@ int nextTwinPrime(int n)
   return n;
 }
 
+int largestTwinPrime(int a, int b)
+{
+  
+}
+
 
 
 /*
-
 int main()
 {
+  
   std::cout << "Task A:\n";
   std::cout << isDivisibleBy(10,5) << "\n"; //test 10,5 and 11,4
   std::cout << isDivisibleBy(11,4) << "\n";
@@ -93,6 +102,7 @@ int main()
   std::cout << countPrimes(2, 20) << "\n";
   std::cout << countPrimes(3, 7) << "\n";
   std::cout << countPrimes(8, 10) << "\n";
+
 
   std::cout << "Task E:\n";
   std::cout << isTwinPrime(17) << "\n"; //true (1)
