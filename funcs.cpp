@@ -1,5 +1,5 @@
 #include <iostream>
-//#include "funcs.h"
+#include "funcs.h"
 
 // add functions here
 
@@ -71,49 +71,9 @@ int nextTwinPrime(int n)
 
 int largestTwinPrime(int a, int b)
 {
-  
+  while (!isTwinPrime(b))
+    b--;
+  if (b < a)
+    b = -1;
+  return b;
 }
-
-
-
-/*
-int main()
-{
-  
-  std::cout << "Task A:\n";
-  std::cout << isDivisibleBy(10,5) << "\n"; //test 10,5 and 11,4
-  std::cout << isDivisibleBy(11,4) << "\n";
-
-  std::cout << "Task B:\n";
-  std::cout << isPrime(8) << "\n"; // test 2,8,15,17
-  std::cout << isPrime(15) << "\n";
-  std::cout << isPrime(17) << "\n";
-  std::cout << isPrime(2) << "\n";
-
-  std::cout << "Task C:\n";
-  
-  std::cout << nextPrime(0) << "\n"; // test 2, 14, and 17
-  std::cout << nextPrime(3) << "\n";
-  std::cout << nextPrime(14) << "\n";
-  std::cout << nextPrime(17) << "\n";
-
-
-  std::cout << "Task D:\n";
-  std::cout << countPrimes(2, 20) << "\n";
-  std::cout << countPrimes(3, 7) << "\n";
-  std::cout << countPrimes(8, 10) << "\n";
-
-
-  std::cout << "Task E:\n";
-  std::cout << isTwinPrime(17) << "\n"; //true (1)
-  std::cout << isTwinPrime(2) << "\n"; //false
-  std::cout << isTwinPrime(15) << "\n"; //false (0)
-  std::cout << isTwinPrime(19) << "\n"; //true
-
-  std::cout << "Task F:\n";
-  std::cout << nextTwinPrime(17) << "\n"; 
-
-  
-  return 0;
-}
-*/
