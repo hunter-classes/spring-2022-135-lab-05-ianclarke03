@@ -69,11 +69,13 @@ int nextTwinPrime(int n)
   return n;
 }
 
-int largestTwinPrime(int a, int b)
-{
-  while (!isTwinPrime(b))
-    b--;
-  if (b < a)
-    b = -1;
-  return b;
+
+int largestTwinPrime(int a, int b) {
+  int largestTwin = -1;
+  for (int i = a;i <= b;i++) {
+    if(isTwinPrime(i) == true) {
+      largestTwin = i;
+    }
+  }
+  return largestTwin;
 }

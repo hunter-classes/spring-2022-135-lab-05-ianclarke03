@@ -50,6 +50,7 @@ int main()
   std::cout << "The largest twin prime number in the interval (5 <= n <= 18) is " << largestTwinPrime(5,18) << "\n";
   std::cout << "The largest twin prime number in the interval (1 <= n <= 31) is " << largestTwinPrime(1,31) << "\n";
   std::cout << "The largest twin prime number in the interval (14 <= n <= 16) is " << largestTwinPrime(14,16) << "\n";
+  std::cout << "The largest twin prime number in the interval (0 <= n <= 2) is " << largestTwinPrime(0,2) << "\n";
   std::cout << "\n";
   
   return 0;
